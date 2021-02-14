@@ -21,11 +21,9 @@
             flex-direction: row;
             box-shadow: 0px 0px 5px grey;
             z-index: 100;
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
         }
 
-        @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+        @supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur())) {
             .container {
                 background-color: rgba(240, 248, 255, 0.5);
                 backdrop-filter: blur(4px);
@@ -34,21 +32,19 @@
             }
         }
 
-
-
-
-
         .button {
             height: 2%;
-            width: 10%;
+            width: auto;
             padding: 10px;
             text-align: center;
         }
 
         .button:hover {
-            background-color: rgb(209, 231, 252);
+            background-color: rgba(209, 231, 252, .5);
             border-bottom: 3px solid rgb(168, 213, 255);
         }
+
+
 
         /*
         .on {
