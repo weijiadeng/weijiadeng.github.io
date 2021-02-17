@@ -161,20 +161,34 @@
 
         .list-img {
             margin: 0;
-            padding: 10px 0 10px 54px;
             list-style: none;
         }
 
         .khoury {
-            background: url('./icons/khoury.jpeg') no-repeat left center/40px;
+            background: url('./icons/khoury.jpeg') no-repeat left center;
         }
 
         .northeastern {
-            background: url('./icons/neu.jpeg') no-repeat left center/40px;
-
+            background: url('./icons/neu.jpeg') no-repeat left center;
         }
 
-        
+        .facebook {
+            background: url('./icons/fb.jpeg') no-repeat left center;
+        }
+        .uber {
+            background: url('./icons/uber.png') no-repeat left center;
+        }
+
+        .small {
+            background-size: 40px;
+            padding: 10px 0 10px 54px;
+        }
+
+        .middle {
+            background-size: 80px;
+            padding: 40px 0 40px 94px;
+        }
+
 
 
         .section-middle-space {
@@ -188,7 +202,7 @@
 
         }
 
-        summary {
+        .section-header>summary {
             background-color: rgb(37, 110, 194);
             color: white;
             cursor: pointer;
@@ -198,7 +212,6 @@
             box-shadow: 0px 0px 5px rgb(68, 68, 68);
 
         }
-
     </style>
 </head>
 
@@ -224,48 +237,55 @@
             <div class="section">
                 <div class="image-complex">
                     <img class="background-pic"
-                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/texture-waves-cropped.jpg">
+                        src="./cover.jpg">
+                        <!-- Reference: https://myit.by/courses/programming/c-plus-plus-->
                     <img class="personal-pic" src="./photo.jpg">
 
                 </div>
                 <div class="info-section">
                     <div id="left-part-info">
-                        <h3 class = "name">Weijia Deng</h3>
+                        <h3 class="name">Weijia Deng</h3>
                         <div class="current-job">Graduate Student at Northeastern University</div>
                         <div class="current-location"><i>Seattle, Washington, United States</i></div>
                     </div>
                     <div id="right-part-info">
                         <ul>
-                            <li class="list-img khoury">Khoury College of Computer Sciences</li>
-                            <li class="list-img northeastern">Northeastern University</li>
+                            <li class="list-img khoury small">Khoury College of Computer Sciences</li>
+                            <li class="list-img northeastern small">Northeastern University</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="section">
                 <details class="section-header">
-                    <summary><h2>Experience</h2></summary>
-                <h3>Teaching Assistant</h3>
-                <h3>Software Engineer Intern</h3>
-                <summary>Uber Internship</summary>
-                <details> 2020 – Aug 2020
-                    Employment Duration4 mos
-                    LocationSeattle, Washington, United States
-                    Worked in the Michelangelo team. Designed and committed the Java API for the Neuropod, uber's
-                    opensource uniform interface to run deep learning models from multiple frameworks in different
-                    languages.</details>
+                    <summary>
+                        <h2>Experience</h2>
+                    </summary>
+                    <div class="section-container">
+                        <ul>
+                            <li class="list-img khoury middle"><div>Teaching Assistant at Northeastern University</div><div><i><span>Part-time</span></i><span> Seattle, WA</span></div></li>
+                            
+                            <li class="list-img uber middle">Software Engineer Intern at Uber</li>
+                            <li class="list-img facebook middle">Software Engineer Intern at Facebook</li>
+                        </ul>
+                    </div>
+                </details>
             </div>
             <div class="section">
-                <h2>Education</h2>
-                <h3>Teaching Assistant</h3>
-                <h3>Software Engineer Intern</h3>
-                <p>Uber Internship
-                    May 2020 – Aug 2020
-                    Employment Duration4 mos
-                    LocationSeattle, Washington, United States
-                    Worked in the Michelangelo team. Designed and committed the Java API for the Neuropod, uber's
-                    opensource uniform interface to run deep learning models from multiple frameworks in different
-                    languages.</p>
+
+                <details class="section-header">
+                    <summary>
+                        <h2>Education</h2>
+                    </summary>
+                    <h3>Teaching Assistant</h3>
+                    <h3>Software Engineer Intern</h3>
+                    <p>Uber Internship
+                        May 2020 – Aug 2020
+                        Employment Duration4 mos
+                        LocationSeattle, Washington, United States
+                        Worked in the Michelangelo team. Designed and committed the Java API for the Neuropod, uber's
+                        opensource uniform interface to run deep learning models from multiple frameworks in different
+                        languages.</p>
             </div>
         </div>
     </div>
