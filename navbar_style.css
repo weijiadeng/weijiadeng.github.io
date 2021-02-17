@@ -89,11 +89,37 @@
     color: black;
 }
 
+.dropdown-content-container {
+    display: flex;
+    flex-direction: column;
+}
 
+.navbar-menu-item {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-menu-item:hover,
+.navbar-menu-item:active {
+    background-color: rgba(91, 175, 253, 0.5);
+    border-bottom: 3px solid rgb(108, 182, 252);
+    color: black;
+}
 .short-navbar {
     display: none;
 }
 @media (max-width:650px) {
     .short-navbar { display: block; }
     .long-navbar { display: none; }
+    .highlighted {
+        color: rgb(27, 120, 207);
+        border-bottom: rgba(0,0,0,0);
+        text-decoration: none;
+    }
+
+    .highlighted:active,.highlighted:hover {
+        color: rgb(27, 120, 207);
+    }
+
+
 }
