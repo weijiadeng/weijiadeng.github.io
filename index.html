@@ -1,1 +1,400 @@
-Hello!
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(245, 245, 250);
+        }
+
+        .container {
+            position: sticky;
+            top: 0px;
+            margin-top: 0;
+            background-color: rgba(240, 248, 255, 0.9);
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0px 0px 5px grey;
+            z-index: 100;
+        }
+
+        .navbar-item {
+            height: 2%;
+            width: auto;
+            padding: 10px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0);
+            transition: background-color 500ms;
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .navbar-item:hover,
+        .navbar-item:active {
+            background-color: rgba(209, 231, 252, .5);
+            border-bottom: 3px solid rgb(168, 213, 255);
+            color: black;
+        }
+
+
+        .navbar-item:last-child,
+        .navbar-item:last-child:hover,
+        .navbar-item:last-child:active {
+            height: 2%;
+            width: auto;
+            padding: 10px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0);
+            color: black;
+            margin-left: auto;
+            border-left: 2px solid rgb(223, 231, 238);
+            border-bottom: 0;
+        }
+
+        @supports ((-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))) {
+            .container {
+                background-color: rgba(240, 248, 255, 0.5);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+
+            }
+        }
+
+        .highlighted {
+            border-bottom: 3px solid rgb(108, 182, 252);
+            color: rgb(27, 120, 207);
+        }
+
+        .highlighted:hover {
+            border-bottom: 3px solid rgb(108, 182, 252);
+        }
+
+
+        .bottom {
+            margin-top: auto;
+        }
+
+        .main-container {
+            position: relative;
+            top: 0;
+            display: grid;
+            grid-template-rows: 60px auto 40px;
+            grid-template-columns: minmax(40px, 1fr) minmax(30%, 1024px) minmax(40px, 1fr);
+            width: 100%;
+            grid-template-areas:
+                "top-space top-space top-space"
+                "left-space content right-space"
+                "bottom-space bottom-space bottom-space"
+            ;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-container>div {
+            margin: 6px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 5px lightgrey;
+
+        }
+
+
+        .image-complex {
+            background-color: white;
+            border-radius: 4px 4px 0px 0px;
+            display: grid;
+            grid-template-columns: repeat(24, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            margin-top: 0px;
+            margin-bottom: 0;
+        }
+
+        .background-pic {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            grid-row: 1 / span 10;
+            grid-column: 1 / -1;
+            border-radius: 4px 4px 0px 0px;
+            width: 100%;
+            height: 300px;
+            box-shadow: 0px 0px 5px rgb(112, 112, 112);
+        }
+
+
+        .personal-pic {
+            margin-top: 10%;
+            grid-row: 6 / -1;
+            grid-column: 2;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: 10px solid rgb(193, 226, 255);
+            box-shadow: 0px 3px 2px rgb(197, 197, 197);
+
+        }
+
+        .info-section {
+            display: flex;
+            padding-left: 4.5%;
+            font-size: x-large;
+            padding: 0px 20px 40px 20px;
+
+        }
+
+        .name {
+            padding-left: 0px;
+            margin-bottom: 0px;
+        }
+
+        #right-part-info {
+            margin-left: auto;
+        }
+
+        .list-img {
+            margin: 0;
+            list-style: none;
+        }
+
+        .khoury {
+            background: url('./icons/khoury.jpeg') no-repeat left center;
+        }
+
+        .northeastern {
+            background: url('./icons/neu.jpeg') no-repeat left center;
+        }
+
+        .facebook {
+            background: url('./icons/fb.jpeg') no-repeat left center;
+        }
+
+        .uber {
+            background: url('./icons/uber.png') no-repeat left center;
+        }
+
+        .nanjingu {
+            background: url('./icons/nju.png') no-repeat left center;
+        }
+
+        .solarx {
+            background: url('./icons/solar-x.jpg') no-repeat left center;
+        }
+
+
+        .small {
+            background-size: 40px;
+            padding: 10px 0 10px 54px;
+        }
+
+        .middle {
+            background-size: 80px;
+            padding: 40px 0 40px 94px;
+        }
+
+
+
+        .section-middle-space {
+            grid-area: section-middle-space;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 4px;
+            height: 100%;
+
+        }
+
+        .section-header>summary {
+            background-color: rgb(37, 110, 194);
+            color: white;
+            cursor: pointer;
+            list-style-type: none;
+            padding: 1px 20px 1px 20px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 5px rgb(68, 68, 68);
+        }
+
+        .section-header>details::-webkit-details-marker {
+            display: none;
+        }
+
+        .section-header>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .section-header>summary::marker {
+            display: none;
+        }
+
+        .section-entry {
+            display: flex;
+        }
+
+        .section-entry>span:last-child {
+            margin-left: auto;
+            margin-right: 40px;
+        }
+
+        .entry-desc {
+            margin-top: 10px;
+        }
+
+        .article-content {
+            text-align: justify;
+            padding: 40px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/weijiadeng.github.io/navbar.html" class="navbar-item highlighted"> About Me</a>
+        <a href="/weijiadeng.github.io/navbar.html" class="navbar-item"> Egestas</a>
+
+        <div class="navbar-item">
+            Suspendisse
+        </div>
+        <div class="navbar-item">
+            Ullamcorper
+        </div>
+        <div class="navbar-item"> <i><b> Weijia Deng's Personal Website</b></i> </div>
+    </div>
+    <div class="main-container">
+        <div class="top-space"></div>
+        <div class="left-space"></div>
+        <div class="right-space"></div>
+        <div class="bottom-space"></div>
+        <div class="content-container">
+            <div class="section">
+                <div class="image-complex">
+                    <img class="background-pic" src="./cover.jpg">
+                    <!-- Reference: https://myit.by/courses/programming/c-plus-plus-->
+                    <img class="personal-pic" src="./photo.jpg">
+
+                </div>
+                <div class="info-section">
+                    <div id="left-part-info">
+                        <h3 class="name">Weijia Deng</h3>
+                        <div class="current-job">Graduate Student at Northeastern University</div>
+                        <div class="current-location"><i>Seattle, Washington, United States</i></div>
+                    </div>
+                    <div id="right-part-info">
+                        <ul>
+                            <li class="list-img khoury small">Khoury College of Computer Sciences</li>
+                            <li class="list-img northeastern small">Northeastern University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <details class="section-header" open>
+                    <summary>
+                        <h2>About Me</h2>
+                    </summary>
+                    <div class="article-content">
+                        <p>Hi, my name is Weijia, it sounds like Vega if you pronounce my name in Cantonese.</p>
+
+                        <p>I mainly used C++ in my coop experience at Facebook and Uber, and do not know much about web
+                        development. For the front-end side I know literally nothing except some JavaScript. For the
+                        back-end side I know a little bit spring boot, Java Servlet, Go lang and PHP. I really love the
+                        functional programming nature of JavaScript, and hope could learn more to write powerful scripts
+                        for everyday usage. I also want to build a beautiful personal website.</p>
+
+                        <p>I finished my undergraduate and a first master degree at Nanjing University, majoring chemistry
+                        and chemical engineering. I like cooking in my spare time, it's like chemical experiments
+                        somehow, except that it is much safer.</p>
+
+
+                    </div>
+                </details>
+            </div>
+
+            <div class="section">
+                <details class="section-header" open>
+                    <summary>
+                        <h2>Experience</h2>
+                    </summary>
+                    <div class="section-container">
+                        <ul>
+                            <li class="list-img khoury middle">
+                                <div class="section-entry"><span><b>Teaching Assistant</b></span><span
+                                        class="job-time"><i>Part-time</i></span></div>
+                                <div class="section-entry"><span>Khoury College of Computer Sciences, Seattle,
+                                        WA</span><span><i>September, 2020 - Now</i></span></div>
+                                <div class="entry-desc">Teaching assistant for CS6650 Distributed Systems.
+                                </div>
+
+                            </li>
+
+                            <li class="list-img uber middle">
+                                <div class="section-entry"><span><b>Software Engineer Intern</b></span><span
+                                        class="job-time"><i>Internship</i></span></div>
+                                <div class="section-entry"><span>Uber Technologies, Seattle,
+                                        WA</span><span><i>May, 2020 - August, 2020</i></span></div>
+                                <div class="entry-desc">Worked in the Michelangelo team. Designed and committed the Java
+                                    API for the
+                                    Neuropod, uber's opensource uniform interface to run deep learning models from
+                                    multiple frameworks in different languages.
+                                </div>
+                            </li>
+                            <li class="list-img facebook middle">
+                                <div class="section-entry"><span><b>Software Engineer Intern</b></span><span
+                                        class="job-time"><i>Internship</i></span></div>
+                                <div class="section-entry"><span>Facebook, Seattle,
+                                        WA</span><span><i>Jan, 2020 - April, 2020</i></span></div>
+                                <div class="entry-desc">Worked in the Delos team. Developed a smart CLI for Delos.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+
+            <div class="section">
+
+                <details class="section-header" open>
+                    <summary>
+                        <h2>Education</h2>
+                    </summary>
+                    <div class="section-container">
+                        <ul>
+                            <li class="list-img northeastern middle">
+                                <div class="section-entry"><span><b>Master of Science in Computer
+                                            Science</b></span><span></span></div>
+                                <div class="section-entry"><span>Northeastern University, Seattle,
+                                        WA</span><span><i>January, 2019 - May, 2021</i></span></div>
+                            </li>
+                            <li class="list-img nanjingu middle">
+                                <div class="section-entry"><span><b>Master of Engineering in Chemical
+                                            Engineering</b></span><span></span></div>
+                                <div class="section-entry"><span>Nanjing University, Nanjing,
+                                        China</span><span><i>September, 2012 - June, 2015</i></span></div>
+                            </li>
+                            <li class="list-img nanjingu middle">
+                                <div class="section-entry"><span><b>Bachelor of Science in
+                                            Chemistry</b></span><span></span>
+                                </div>
+                                <div class="section-entry"><span>Nanjing University, Nanjing,
+                                        China</span><span><i>September, 2008 - June, 2012</i></span></div>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            </details>
+        </div>
+    </div>
+</body>
+
+</html>
