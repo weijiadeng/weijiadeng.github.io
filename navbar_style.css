@@ -1,0 +1,63 @@
+.navbar-container {
+    position: sticky;
+    top: 0px;
+    margin-top: 0;
+    background-color: rgba(240, 248, 255, 0.9);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 5px grey;
+    z-index: 100;
+}
+
+.navbar-item {
+    height: 2%;
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 500ms;
+    text-decoration: none;
+    color: black;
+}
+
+
+.navbar-item:hover,
+.navbar-item:active {
+    background-color: rgba(209, 231, 252, .5);
+    border-bottom: 3px solid rgb(168, 213, 255);
+    color: black;
+}
+
+
+.navbar-item:last-child,
+.navbar-item:last-child:hover,
+.navbar-item:last-child:active {
+    height: 2%;
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    margin-left: auto;
+    border-left: 2px solid rgb(223, 231, 238);
+    border-bottom: 0;
+}
+
+@supports ((-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))) {
+    .navbar-container {
+        background-color: rgba(240, 248, 255, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+    }
+}
+
+.highlighted {
+    border-bottom: 3px solid rgb(108, 182, 252);
+    color: rgb(27, 120, 207);
+}
+
+.highlighted:hover {
+    border-bottom: 3px solid rgb(108, 182, 252);
+}

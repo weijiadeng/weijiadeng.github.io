@@ -1,0 +1,141 @@
+.section {
+    background-color: white;
+    border-radius: 4px;
+    height: 100%;
+
+}
+
+.section-header>summary {
+    background-color: rgb(37, 110, 194);
+    color: white;
+    cursor: pointer;
+    list-style-type: none;
+    padding: 1px 20px 1px 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px rgb(68, 68, 68);
+}
+
+.section-header>details::-webkit-details-marker {
+    display: none;
+}
+
+.section-header>summary::-webkit-details-marker {
+    display: none;
+}
+
+.section-header>summary::marker {
+    display: none;
+}
+
+.section-entry {
+    display: flex;
+}
+
+.section-entry>span:last-child {
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.entry-desc {
+    margin-top: 10px;
+}
+
+.article-content {
+    text-align: justify;
+    padding: 40px;
+    font-size: large;
+}
+
+
+
+
+.image-complex {
+    background-color: white;
+    border-radius: 4px 4px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+.background-pic {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    grid-row: 1 / span 10;
+    grid-column: 1 / -1;
+    border-radius: 4px 4px 0px 0px;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px 0px 5px rgb(112, 112, 112);
+}
+
+
+.personal-pic {
+    margin-top: 10%;
+    grid-row: 6 / -1;
+    grid-column: 2;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 10px solid rgb(193, 226, 255);
+    box-shadow: 0px 3px 2px rgb(197, 197, 197);
+
+}
+
+.info-section {
+    display: flex;
+    padding-left: 4.5%;
+    font-size: x-large;
+    padding: 0px 20px 40px 20px;
+
+}
+
+.name {
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+#right-part-info {
+    margin-left: auto;
+}
+
+.khoury {
+    background: url('./icons/khoury.jpeg') no-repeat left center;
+}
+
+.northeastern {
+    background: url('./icons/neu.jpeg') no-repeat left center;
+}
+
+.facebook {
+    background: url('./icons/fb.jpeg') no-repeat left center;
+}
+
+.uber {
+    background: url('./icons/uber.png') no-repeat left center;
+}
+
+.nanjingu {
+    background: url('./icons/nju.png') no-repeat left center;
+}
+
+.solarx {
+    background: url('./icons/solar-x.jpg') no-repeat left center;
+}
+
+.list-img {
+    margin: 0;
+    list-style: none;
+}
+
+.small {
+    background-size: 40px;
+    padding: 10px 0 10px 54px;
+}
+
+.middle {
+    background-size: 80px;
+    padding: 40px 0 40px 94px;
+}
