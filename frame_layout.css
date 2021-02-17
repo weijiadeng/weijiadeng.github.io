@@ -35,6 +35,5 @@ body {
 @media (max-width:650px) {
     .main-container {
         grid-template-rows: 5px auto 5px;
-
     }
 }
