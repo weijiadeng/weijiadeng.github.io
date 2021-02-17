@@ -175,6 +175,7 @@
         .facebook {
             background: url('./icons/fb.jpeg') no-repeat left center;
         }
+
         .uber {
             background: url('./icons/uber.png') no-repeat left center;
         }
@@ -210,8 +211,16 @@
             padding: 1px 20px 1px 20px;
             border-radius: 4px;
             box-shadow: 0px 0px 5px rgb(68, 68, 68);
-
         }
+
+        .section-header>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .section-header>summary::marker {
+            display: none;
+        }
+        
     </style>
 </head>
 
@@ -236,9 +245,8 @@
         <div class="content-container">
             <div class="section">
                 <div class="image-complex">
-                    <img class="background-pic"
-                        src="./cover.jpg">
-                        <!-- Reference: https://myit.by/courses/programming/c-plus-plus-->
+                    <img class="background-pic" src="./cover.jpg">
+                    <!-- Reference: https://myit.by/courses/programming/c-plus-plus-->
                     <img class="personal-pic" src="./photo.jpg">
 
                 </div>
@@ -263,8 +271,11 @@
                     </summary>
                     <div class="section-container">
                         <ul>
-                            <li class="list-img khoury middle"><div>Teaching Assistant at Northeastern University</div><div><i><span>Part-time</span></i><span> Seattle, WA</span></div></li>
-                            
+                            <li class="list-img khoury middle">
+                                <div>Teaching Assistant at Northeastern University</div>
+                                <div><i><span>Part-time</span></i><span> Seattle, WA</span></div>
+                            </li>
+
                             <li class="list-img uber middle">Software Engineer Intern at Uber</li>
                             <li class="list-img facebook middle">Software Engineer Intern at Facebook</li>
                         </ul>
