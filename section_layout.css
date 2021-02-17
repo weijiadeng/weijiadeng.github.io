@@ -202,10 +202,15 @@
         list-style: none;
     }
 
+    .title-list {
+        display: none;
+    }
+    
+
     .article-content {
         text-align: justify;
         padding: 20px;
-        font-size: large;
+        font-size: medium;
     }    
     
     .section-entry {
