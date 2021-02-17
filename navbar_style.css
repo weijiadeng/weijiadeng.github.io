@@ -17,6 +17,7 @@
     text-align: center;
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 500ms;
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
     text-decoration: none;
     color: black;
 }
@@ -49,6 +50,11 @@
         background-color: rgba(240, 248, 255, 0.5);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+    }
+    .dropdown-content {
+        background-color: rgba(240, 248, 255, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
 
     }
 }
@@ -60,4 +66,34 @@
 
 .highlighted:hover {
     border-bottom: 3px solid rgb(108, 182, 252);
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(240, 248, 255, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-menu:hover {
+    color: rgb(27, 120, 207);
+}
+
+.dropdown-menu:hover > .dropdown-content {
+    display: block;
+    color: black;
+}
+
+
+.short-navbar {
+    display: none;
+}
+@media (max-width:650px) {
+    .short-navbar { display: block; }
+    .long-navbar { display: none; }
 }
