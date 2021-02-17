@@ -5,13 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
             margin: 0;
-            background-color:rgb(245, 245, 245);
+            background-color: rgb(245, 245, 250);
         }
-
-
 
         .container {
             position: sticky;
@@ -25,7 +24,7 @@
             z-index: 100;
         }
 
-        .button {
+        .navbar-item {
             height: 2%;
             width: auto;
             padding: 10px;
@@ -36,7 +35,18 @@
             color: black;
         }
 
-        .desc {
+
+        .navbar-item:hover,
+        .navbar-item:active {
+            background-color: rgba(209, 231, 252, .5);
+            border-bottom: 3px solid rgb(168, 213, 255);
+            color: black;
+        }
+
+
+        .navbar-item:last-child,
+        .navbar-item:last-child:hover,
+        .navbar-item:last-child:active {
             height: 2%;
             width: auto;
             padding: 10px;
@@ -44,58 +54,39 @@
             background-color: rgba(0, 0, 0, 0);
             color: black;
             margin-left: auto;
+            border-left: 2px solid rgb(223, 231, 238);
+            border-bottom: 0;
         }
 
-        .button:hover,
-        .button:active {
-            background-color: rgba(209, 231, 252, .5);
-            border-bottom: 3px solid rgb(168, 213, 255);
-        }
-
-
-
-        @supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur())) {
+        @supports ((-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))) {
             .container {
                 background-color: rgba(240, 248, 255, 0.5);
-                backdrop-filter: blur(4px);
-                -webkit-backdrop-filter: blur(4px);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
 
             }
         }
 
-
-        /*
-        .on {
-            background-color:rgb(159, 207, 255);
-
-        }
-
-        .on:hover {
-            background-color:rgb(133, 193, 253);
-
-        }
-        */
-        .on {
+        .highlighted {
             border-bottom: 3px solid rgb(108, 182, 252);
-
+            color: rgb(27, 120, 207);
         }
 
-        .on:hover {
+        .highlighted:hover {
             border-bottom: 3px solid rgb(108, 182, 252);
         }
-
 
 
         .bottom {
             margin-top: auto;
         }
 
-        .grid-container {
+        .main-container {
             position: relative;
             top: 0;
             display: grid;
             grid-template-rows: 60px auto 40px;
-            grid-template-columns: minmax(40px,1fr) minmax(30%, 1024px) minmax(40px,1fr);
+            grid-template-columns: minmax(40px, 1fr) minmax(30%, 1024px) minmax(40px, 1fr);
             width: 100%;
             grid-template-areas:
                 "top-space top-space top-space"
@@ -104,123 +95,178 @@
             ;
         }
 
-        
-        .content {
-            padding-top: 40px;
-            padding-left: 60px;
-            padding-right: 60px;
-            padding-bottom: 40px;
-            background-color: white;
+        .content-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-container>div {
+            margin: 6px;
             box-shadow: 0px 0px 5px lightgrey;
-            border-radius: 4px;
 
         }
+
+
+        .image-complex {
+            background-color: white;
+            border-radius: 4px 4px 0px 0px;
+            display: grid;
+            grid-template-columns: repeat(24, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            margin-top: 0px;
+            margin-bottom: 0;
+        }
+
+        .background-pic {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            grid-row: 1 / span 10;
+            grid-column: 1 / -1;
+            border-radius: 4px 4px 0px 0px;
+            width: 100%;
+            height: 300px;
+            box-shadow: 0px 0px 5px rgb(112, 112, 112);
+        }
+
+
+        .personal-pic {
+            margin-top: 10%;
+            grid-row: 6 / -1;
+            grid-column: 2;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: 10px solid rgb(193, 226, 255);
+            box-shadow: 0px 3px 2px rgb(197, 197, 197);
+
+        }
+
+        .info-section {
+            display: flex;
+            padding-left: 4.5%;
+            font-size: x-large;
+            padding: 0px 20px 40px 20px;
+
+        }
+
+        .name {
+            padding-left: 0px;
+            margin-bottom: 0px;
+        }
+
+        #right-part-info {
+            margin-left: auto;
+        }
+
+        .list-img {
+            margin: 0;
+            padding: 10px 0 10px 54px;
+            list-style: none;
+        }
+
+        .khoury {
+            background: url('./icons/khoury.jpeg') no-repeat left center/40px;
+        }
+
+        .northeastern {
+            background: url('./icons/neu.jpeg') no-repeat left center/40px;
+
+        }
+
+        
+
+
+        .section-middle-space {
+            grid-area: section-middle-space;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 4px;
+            height: 100%;
+
+        }
+
+        summary {
+            background-color: rgb(37, 110, 194);
+            color: white;
+            cursor: pointer;
+            list-style-type: none;
+            padding: 1px 20px 1px 20px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 5px rgb(68, 68, 68);
+
+        }
+
     </style>
 </head>
 
 <body>
     <div class="container">
-        <a href="/weijiadeng.github.io/navbar.html" class="button"> Consectetur</a>
-        <a href="/weijiadeng.github.io/navbar.html" class="button on"> Egestas</a>
+        <a href="/weijiadeng.github.io/navbar.html" class="navbar-item highlighted"> About Me</a>
+        <a href="/weijiadeng.github.io/navbar.html" class="navbar-item"> Egestas</a>
 
-        <div class="button">
+        <div class="navbar-item">
             Suspendisse
         </div>
-        <div class="button">
+        <div class="navbar-item">
             Ullamcorper
         </div>
-        <div class="desc"> <i><b> Weijia Deng's Personal Website</b></i> </div>
+        <div class="navbar-item"> <i><b> Weijia Deng's Personal Website</b></i> </div>
     </div>
-    <div class="grid-container">
+    <div class="main-container">
         <div class="top-space"></div>
         <div class="left-space"></div>
         <div class="right-space"></div>
         <div class="bottom-space"></div>
-        <div class="content">
-            <p>She patiently waited for his number to be called. She had no desire to be there, but her mom had insisted
-                that she go. She's resisted at first, but over time she realized it was simply easier to appease her and
-                go. Mom tended to be that way. She would keep insisting until you wore down and did what she wanted. So,
-                here she sat, patiently waiting for her number to be called.</p>
-            <p>Hopes and dreams were dashed that day. It should have been expected, but it still came as a shock. The
-                warning signs had been ignored in favor of the possibility, however remote, that it could actually
-                happen. That possibility had grown from hope to an undeniable belief it must be destiny. That was until
-                it wasn't and the hopes and dreams came crashing down.</p>
-            <p>It had been her dream for years but Dana had failed to take any action toward making it come true. There
-                had always been a good excuse to delay or prioritize another project. As she woke, she realized she was
-                once again at a crossroads. Would it be another excuse or would she finally find the courage to pursue
-                her dream? Dana rose and took her first step.</p>
-            <p>There was a time when he would have embraced the change that was coming. In his youth, he sought
-                adventure and the unknown, but that had been years ago. He wished he could go back and learn to find the
-                excitement that came with change but it was useless. That curiosity had long left him to where he had
-                come to loathe anything that put him out of his comfort zone.</p>
-            <p>He was aware there were numerous wonders of this world including the unexplained creations of humankind
-                that showed the wonder of our ingenuity. There are huge heads on Easter Island. There are the Egyptian
-                pyramids. There’s Stonehenge. But he now stood in front of a newly discovered monument that simply
-                didn't make any sense and he wondered how he was ever going to be able to explain it.</p>
-            <p>Was it enough? That was the question he kept asking himself. Was being satisfied enough? He looked around
-                him at everyone yearning to just be satisfied in their daily life and he had reached that goal. He knew
-                that he was satisfied and he also knew it wasn't going to be enough.</p>
-            <p>His parents continued to question him. He didn't know what to say to them since they refused to believe
-                the truth. He explained again and again, and they dismissed his explanation as a figment of his
-                imagination. There was no way that grandpa, who had been dead for five years, could have told him where
-                the treasure had been hidden. Of course, it didn't help that grandpa was roaring with laughter in the
-                chair next to him as he tried to explain once again how he'd found it.</p>
-            <p>Sometimes it's the first moment of the day that catches you off guard. That's what Wendy was thinking.
-                She opened her window to see fire engines screeching down the street. While this wasn't something
-                completely unheard of, it also wasn't normal. It was a sure sign of what was going to happen that day.
-                She could feel it in her bones and it wasn't the way she wanted the day to begin.</p>
-            <p>It was going to rain. The weather forecast didn't say that, but the steel plate in his hip did. He had
-                learned over the years to trust his hip over the weatherman. It was going to rain, so he better get
-                outside and prepare.</p>
-            <p>Out of another, I get a lovely view of the bay and a little private wharf belonging to the estate. There
-                is a beautiful shaded lane that runs down there from the house. I always fancy I see people walking in
-                these numerous paths and arbors, but John has cautioned me not to give way to fancy in the least. He
-                says that with my imaginative power and habit of story-making a nervous weakness like mine is sure to
-                lead to all manner of excited fancies and that I ought to use my will and good sense to check the
-                tendency. So I try.</p>
-            <p>It seemed like it should have been so simple. There was nothing inherently difficult with getting the
-                project done. It was simple and straightforward enough that even a child should have been able to
-                complete it on time, but that wasn't the case. The deadline had arrived and the project remained
-                unfinished.</p>
-            <p>Her eyebrows were a shade darker than her hair. They were thick and almost horizontal, emphasizing the
-                depth of her eyes. She was rather handsome than beautiful. Her face was captivating by reason of a
-                certain frankness of expression and a contradictory subtle play of features. Her manner was engaging.
-            </p>
-            <p>Don't forget that gifts often come with costs that go beyond their purchase price. When you purchase a
-                child the latest smartphone, you're also committing to a monthly phone bill. When you purchase the
-                latest gaming system, you're likely not going to be satisfied with the games that come with it for long
-                and want to purchase new titles to play. When you buy gifts it's important to remember that some come
-                with additional costs down the road that can be much more expensive than the initial gift itself.</p>
-            <p>I'm meant to be writing at this moment. What I mean is, I'm meant to be writing something else at this
-                moment. The document I'm meant to be writing is, of course, open in another program on my computer and
-                is patiently awaiting my attention. Yet here I am plonking down senseless sentiments in this paragraph
-                because it's easier to do than to work on anything particularly meaningful. I am grateful for the
-                distraction.</p>
-            <p>The red ball sat proudly at the top of the toybox. It had been the last to be played with and anticipated
-                it would be the next as well. The other toys grumbled beneath. At one time each had held the spot of the
-                red ball, but over time they had sunk deeper and deeper into the toy box.</p>
-            <p>The cab arrived late. The inside was in as bad of shape as the outside which was concerning, and it
-                didn't appear that it had been cleaned in months. The green tree air-freshener hanging from the rearview
-                mirror was either exhausted of its scent or not strong enough to overcome the other odors emitting from
-                the cab. The correct decision, in this case, was to get the hell out of it and to call another cab, but
-                she was late and didn't have a choice.</p>
-            <p>It went through such rapid contortions that the little bear was forced to change his hold on it so many
-                times he became confused in the darkness, and could not, for the life of him, tell whether he held the
-                sheep right side up, or upside down. But that point was decided for him a moment later by the animal
-                itself, who, with a sudden twist, jabbed its horns so hard into his lowest ribs that he gave a grunt of
-                anger and disgust.</p>
-            <p>What have you noticed today? I noticed that if you outline the eyes, nose, and mouth on your face with
-                your finger, you make an "I" which makes perfect sense, but is something I never noticed before. What
-                have you noticed today?</p>
-            <p>She never liked cleaning the sink. It was beyond her comprehension how it got so dirty so quickly. It
-                seemed that she was forced to clean it every other day. Even when she was extra careful to keep things
-                clean and orderly, it still ended up looking like a mess in a couple of days. What she didn't know was
-                there was a tiny creature living in it that didn't like things neat.</p>
-            <p>The headphones were on. They had been utilized on purpose. She could hear her mom yelling in the
-                background, but couldn't make out exactly what the yelling was about. That was exactly why she had put
-                them on. She knew her mom would enter her room at any minute, and she could pretend that she hadn't
-                heard any of the previous yelling.</p>
+        <div class="content-container">
+            <div class="section">
+                <div class="image-complex">
+                    <img class="background-pic"
+                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/texture-waves-cropped.jpg">
+                    <img class="personal-pic" src="./photo.jpg">
 
+                </div>
+                <div class="info-section">
+                    <div id="left-part-info">
+                        <h3 class = "name">Weijia Deng</h3>
+                        <div class="current-job">Graduate Student at Northeastern University</div>
+                        <div class="current-location"><i>Seattle, Washington, United States</i></div>
+                    </div>
+                    <div id="right-part-info">
+                        <ul>
+                            <li class="list-img khoury">Khoury College of Computer Sciences</li>
+                            <li class="list-img northeastern">Northeastern University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <details class="section-header">
+                    <summary><h2>Experience</h2></summary>
+                <h3>Teaching Assistant</h3>
+                <h3>Software Engineer Intern</h3>
+                <summary>Uber Internship</summary>
+                <details> 2020 – Aug 2020
+                    Employment Duration4 mos
+                    LocationSeattle, Washington, United States
+                    Worked in the Michelangelo team. Designed and committed the Java API for the Neuropod, uber's
+                    opensource uniform interface to run deep learning models from multiple frameworks in different
+                    languages.</details>
+            </div>
+            <div class="section">
+                <h2>Education</h2>
+                <h3>Teaching Assistant</h3>
+                <h3>Software Engineer Intern</h3>
+                <p>Uber Internship
+                    May 2020 – Aug 2020
+                    Employment Duration4 mos
+                    LocationSeattle, Washington, United States
+                    Worked in the Michelangelo team. Designed and committed the Java API for the Neuropod, uber's
+                    opensource uniform interface to run deep learning models from multiple frameworks in different
+                    languages.</p>
+            </div>
         </div>
     </div>
 </body>
