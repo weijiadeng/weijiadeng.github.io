@@ -37,6 +37,7 @@
 
 .entry-desc {
     margin-top: 10px;
+    text-align: justify;
 }
 
 .article-content {
@@ -189,6 +190,7 @@
     .section-container {
         margin-top: 30px;
         padding-left: 10px;
+        padding-right: 10px;
     }
 
     ul {
