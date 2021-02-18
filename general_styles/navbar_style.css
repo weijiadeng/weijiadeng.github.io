@@ -103,12 +103,6 @@
 }
 
 @media (max-width:650px) {
-    .short-navbar {
-        display: inline;
-    }
-    .long-navbar {
-        display: none;
-    }
     .highlighted {
         color: rgb(27, 120, 207);
         background-color: rgba(0, 0, 0, 0);
