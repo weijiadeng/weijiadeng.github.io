@@ -11,7 +11,7 @@ body {
     position: relative;
     top: 0;
     display: grid;
-    grid-template-rows: 120px auto 40px;
+    grid-template-rows: 60px auto 40px;
     grid-template-columns: minmax(5px, 1fr) minmax(30%, 1024px) minmax(5px, 1fr);
     width: 100%;
     grid-template-areas: "top-space top-space top-space" "left-space content right-space" "bottom-space bottom-space bottom-space";
@@ -47,7 +47,7 @@ body {
 
 @media (max-width:650px) {
     .main-container {
-        grid-template-rows: 60px auto 5px;
+        grid-template-rows: 5px auto 5px;
     }
     .content-container>div {
         margin: 3px;

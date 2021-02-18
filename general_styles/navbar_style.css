@@ -1,5 +1,14 @@
+.short-navbar * {
+    position: sticky;
+    z-index: 100;
+}
+
+.long-navbar * {
+    position: sticky;
+    z-index: 100;
+}
+
 .navbar-container {
-    position: fixed;
     top: 0px;
     margin-top: 0;
     background-color: rgba(240, 248, 255, 0.9);
@@ -7,7 +16,6 @@
     display: flex;
     flex-direction: row;
     box-shadow: 0px 0px 5px grey;
-    z-index: 100;
 }
 
 .navbar-item {
