@@ -36,4 +36,10 @@ body {
     .main-container {
         grid-template-rows: 5px auto 5px;
     }
+
+    .content-container>div {
+        margin: 3px;
+        margin-bottom: 12px;
+    }
+    
 }

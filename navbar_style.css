@@ -68,8 +68,6 @@
     border-bottom: 3px solid rgb(108, 182, 252);
 }
 
-
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -105,11 +103,14 @@
     border-bottom: 3px solid rgb(108, 182, 252);
     color: black;
 }
+
 .short-navbar {
     display: none;
+    height: auto;
 }
+
 @media (max-width:650px) {
-    .short-navbar { display: block; }
+    .short-navbar { display: inline;  }
     .long-navbar { display: none; }
     .highlighted {
         color: rgb(27, 120, 207);
