@@ -1,0 +1,36 @@
+/* Reference: https://en.wikipedia.org/wiki/File:Email_icon.svg*/
+
+.email {
+    background: url('../icons/email.svg') no-repeat left center;
+}
+
+
+/* All the icons below belongs to the corresponding organzation */
+
+.khoury {
+    background: url('../icons/khoury.jpeg') no-repeat left center;
+}
+
+.northeastern {
+    background: url('../icons/neu.jpeg') no-repeat left center;
+}
+
+.facebook {
+    background: url('../icons/fb.jpeg') no-repeat left center;
+}
+
+.uber {
+    background: url('../icons/uber.png') no-repeat left center;
+}
+
+.nanjingu {
+    background: url('../icons/nju.png') no-repeat left center;
+}
+
+.github {
+    background: url('../icons/github.png') no-repeat left center;
+}
+
+.linkedin {
+    background: url('../icons/linkedin.png') no-repeat left center;
+}

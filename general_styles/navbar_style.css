@@ -22,7 +22,6 @@
     color: black;
 }
 
-
 .navbar-item:hover,
 .navbar-item:active {
     background-color: rgba(209, 231, 252, .5);
@@ -30,16 +29,10 @@
     color: black;
 }
 
-
 .navbar-item:last-child,
 .navbar-item:last-child:hover,
 .navbar-item:last-child:active {
     height: 2%;
-    width: auto;
-    padding: 10px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0);
-    color: black;
     margin-left: auto;
     border-left: 2px solid rgb(223, 231, 238);
     border-bottom: 0;
@@ -55,7 +48,6 @@
         background-color: rgba(240, 248, 255, 0.5);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-
     }
 }
 
@@ -82,7 +74,7 @@
     color: rgb(27, 120, 207);
 }
 
-.dropdown-menu:hover > .dropdown-content {
+.dropdown-menu:hover>.dropdown-content {
     display: block;
     color: black;
 }
@@ -97,30 +89,42 @@
     color: black;
 }
 
-.navbar-menu-item:hover,
-.navbar-menu-item:active {
-    background-color: rgba(91, 175, 253, 0.5);
-    border-bottom: 3px solid rgb(108, 182, 252);
-    color: black;
-}
-
 .short-navbar {
     display: none;
     height: auto;
 }
 
 @media (max-width:650px) {
-    .short-navbar { display: inline;  }
-    .long-navbar { display: none; }
+    .short-navbar {
+        display: inline;
+    }
+    .long-navbar {
+        display: none;
+    }
     .highlighted {
         color: rgb(27, 120, 207);
-        border-bottom: rgba(0,0,0,0);
+        background-color: rgba(0, 0, 0, 0);
+        border-bottom: rgba(0, 0, 0, 0);
         text-decoration: none;
     }
-
-    .highlighted:active,.highlighted:hover {
+    .navbar-menu-item:hover,
+    .navbar-menu-item:active {
+        background-color: rgba(91, 175, 253, 0.5);
+        border-bottom: 0px;
         color: rgb(27, 120, 207);
     }
-
-
+    .highlighted:active,
+    .highlighted:hover {
+        color: rgb(0, 103, 199);
+        border-bottom: 0px solid rgb(108, 182, 252);
+    }
+    .navbar-item {
+        border-bottom: 0;
+        text-decoration: none;
+        color: black;
+    }
+    .navbar-item:hover,
+    .navbar-item:active {
+        border-bottom: 0;
+    }
 }

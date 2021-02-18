@@ -26,11 +26,13 @@
     display: none;
 }
 
-.section-entry, .section-second-line {
+.section-entry,
+.section-second-line {
     display: flex;
 }
 
-.section-entry>span:last-child, .section-second-line>span:last-child {
+.section-entry>span:last-child,
+.section-second-line>span:last-child {
     margin-left: auto;
     margin-right: 40px;
 }
@@ -45,9 +47,6 @@
     padding: 40px;
     font-size: large;
 }
-
-
-
 
 .image-complex {
     background-color: white;
@@ -71,7 +70,6 @@
     box-shadow: 0px 0px 5px rgb(112, 112, 112);
 }
 
-
 .personal-pic {
     margin-top: 10%;
     grid-row: 6 / -1;
@@ -81,7 +79,6 @@
     height: 200px;
     border: 10px solid rgb(193, 226, 255);
     box-shadow: 0px 3px 2px rgb(197, 197, 197);
-
 }
 
 .info-section {
@@ -100,29 +97,8 @@
     margin-left: auto;
 }
 
-.khoury {
-    background: url('./icons/khoury.jpeg') no-repeat left center;
-}
 
-.northeastern {
-    background: url('./icons/neu.jpeg') no-repeat left center;
-}
-
-.facebook {
-    background: url('./icons/fb.jpeg') no-repeat left center;
-}
-
-.uber {
-    background: url('./icons/uber.png') no-repeat left center;
-}
-
-.nanjingu {
-    background: url('./icons/nju.png') no-repeat left center;
-}
-
-.solarx {
-    background: url('./icons/solar-x.jpg') no-repeat left center;
-}
+/* All the icons about belongs to the corresponding organization */
 
 .list-img {
     margin: 0;
@@ -140,7 +116,6 @@
 }
 
 @media (max-width:650px) {
-
     .image-complex {
         background-color: white;
         display: grid;
@@ -149,13 +124,9 @@
         margin-top: 0px;
         margin-bottom: 0;
     }
-
-
-
     .background-pic {
         height: 200px;
     }
-
     .personal-pic {
         margin-top: 10%;
         grid-row: 5 / -1;
@@ -165,9 +136,7 @@
         height: 150px;
         border: 7px solid rgb(193, 226, 255);
         box-shadow: 0px 3px 2px rgb(197, 197, 197);
-    
     }
-
     .info-section {
         padding-left: 4.5%;
         font-size: medium;
@@ -175,71 +144,58 @@
         flex-direction: column;
         padding: 0px 10px 0px 10px;
     }
-    
-
     .small {
         margin-top: 0;
         background-size: 20px;
         padding: 10px 0 10px 34px;
     }
-    
     .middle {
         background-size: 50px;
     }
-
     .section-container {
         margin-top: 30px;
         padding-left: 10px;
         padding-right: 10px;
     }
-
-    .section-container > ul {
+    .section-container>ul {
         padding-left: 5px;
     }
-
     .list-img {
         display: inline;
         vertical-align: text-top;
         margin: 0;
         list-style: none;
     }
-
     .title-list {
         display: none;
     }
-    
-
     .article-content {
         text-align: justify;
         padding: 20px;
         font-size: medium;
-    }    
-    
+    }
     .section-entry {
-        margin-top:15px;
+        margin-top: 15px;
         display: flex;
         flex-direction: column;
     }
     .section-second-line {
         display: flex;
         flex-direction: column;
-
     }
-    .section-entry>span:last-child, .section-second-line>span:last-child {
+    .section-entry>span:last-child,
+    .section-second-line>span:last-child {
         margin-left: 0;
     }
-
     .section {
         background-color: white;
         border-radius: 4px;
         height: 100%;
     }
-
     .entry-desc {
         margin-top: 10px;
         margin-bottom: 30px;
     }
-
     .section-header>summary>h2 {
         margin-top: 10px;
         margin-bottom: 10px;
