@@ -144,6 +144,10 @@
         flex-direction: column;
         padding: 0px 10px 0px 10px;
     }
+    #right-part-info {
+        margin-left: 35px;
+        margin-right: 0;
+    }
     .small {
         margin-top: 0;
         background-size: 20px;
@@ -167,7 +171,8 @@
         list-style: none;
     }
     .title-list {
-        display: none;
+        display: block;
+        margin-left: -35px;
     }
     .article-content {
         text-align: justify;

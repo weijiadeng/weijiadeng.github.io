@@ -1,0 +1,47 @@
+.graph-section {
+    position: relative;
+    /* Make elements inside the container behave like table cells */
+}
+
+.canvas-background-pic {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.reaction-matrix {
+    position: absolute;
+    display: grid;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 1000px;
+    height: fit-content;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+}
+
+.reaction-matrix>* {
+    width: auto;
+    align-self: center;
+    text-align: center;
+    z-index: 105;
+}
+
+.reaction-matrix>*>* {
+    width: 50px;
+    opacity: 0.0;
+    transition: 50ms;
+}
+
+.reaction-block:hover>*,
+.reaction-block>*:active>* {
+    opacity: 1;
+    color: aliceblue;
+    margin-top: 1000px;
+    transform: rotate3d(0, 1, 0.5, 3.142rad);
+    transition: opacity 10ms, margin-top 10000ms, transform 10000ms;
+}
