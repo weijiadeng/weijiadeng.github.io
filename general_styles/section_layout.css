@@ -5,6 +5,7 @@
 }
 
 .section-header>summary {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(37, 110, 194);
     color: white;
     cursor: pointer;
@@ -39,6 +40,7 @@
 
 .entry-desc {
     margin-top: 10px;
+    padding-right: 40px;
     text-align: justify;
 }
 
@@ -141,8 +143,11 @@
         padding-left: 4.5%;
         font-size: medium;
         display: flex;
-        flex-direction: column;
-        padding: 0px 10px 0px 10px;
+        flex-direction: column-reverse;
+        padding: 0px 10px 10px 10px;
+    }
+    .name {
+        margin-top: 0;
     }
     #right-part-info {
         margin-left: 35px;
@@ -151,7 +156,7 @@
     .small {
         margin-top: 0;
         background-size: 20px;
-        padding: 10px 0 10px 34px;
+        padding: 5px 0 5px 25px;
     }
     .middle {
         background-size: 50px;
@@ -200,9 +205,14 @@
     .entry-desc {
         margin-top: 10px;
         margin-bottom: 30px;
+        padding-right: 5px;
     }
     .section-header>summary>h2 {
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+    #right-part-info {
+        margin-right: auto;
+        margin-left: -5px;
     }
 }
