@@ -13,4 +13,10 @@ https://stackoverflow.com/questions/59610602/how-to-remove-bullet-from-details-e
 I imitate the linkein style in the home page:
 https://www.linkedin.com/in/weijia-deng-5a6620175/
 
-All the sources of images are noted in the html code.
+All the sources of images are noted in the html code, I used the following external images:
+https://www.deviantart.com/webblaster48/art/CODE-C-114384381/
+https://www.pexels.com/photo/snow-covered-pine-trees-910311/
+https://en.wikipedia.org/wiki/File:Email_icon.svg
+http://clipart-library.com/clipart/902455.htm
+
+All the organization icons are from their own sources.
